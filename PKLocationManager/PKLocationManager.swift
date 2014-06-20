@@ -54,6 +54,7 @@ class PKLocationManager: NSObject, CLLocationManagerDelegate {
         monitors = monitors.filter { element in
             return element.monitoringObject !== locationMonitor;
         }
+        
         sharedLocationManager.desiredAccuracy = accuracy
         
         if monitors.count == 0 {
@@ -123,8 +124,7 @@ class PKLocationManager: NSObject, CLLocationManagerDelegate {
     /// Returns the monitor wrapper object for a given existing monitoring object.
     func locationMonitorFor(monitoringObject: AnyObject!) -> PKLocationMonitor? {
         for monitor in monitors {
-            if monitor.monitoringObject === monitoringObject
-            {
+            if monitor.monitoringObject === monitoringObject {
                 return monitor
             }
         }
