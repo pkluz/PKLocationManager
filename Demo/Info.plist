@@ -28,5 +28,9 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>The PKLocationManager Demo App requires your authorization to always monitor your location because it is awesome.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The PKLocationManager Demo App requires your authorization to monitor your location because it is awesome.</string>
 </dict>
 </plist>

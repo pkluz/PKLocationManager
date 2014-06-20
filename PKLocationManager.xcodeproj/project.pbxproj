@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F90DA3FB1953B6170086AEFD /* PKLocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D585321953956800B04CB4 /* PKLocationManager.framework */; };
+		F90DA3FC1953B6170086AEFD /* PKLocationManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9D585321953956800B04CB4 /* PKLocationManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F9D585381953956800B04CB4 /* PKLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D585371953956800B04CB4 /* PKLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9D5853E1953956800B04CB4 /* PKLocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D585321953956800B04CB4 /* PKLocationManager.framework */; };
-		F9D585451953956800B04CB4 /* PKLocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D585441953956800B04CB4 /* PKLocationManagerTests.swift */; };
+		F9D5854F195395BD00B04CB4 /* PKLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5854E195395BD00B04CB4 /* PKLocationManager.swift */; };
+		F9D58551195395D600B04CB4 /* PKLocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D58550195395D600B04CB4 /* PKLocationMonitor.swift */; };
+		F9D5855B1953B43300B04CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5855A1953B43300B04CB4 /* AppDelegate.swift */; };
+		F9D5855D1953B43300B04CB4 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5855C1953B43300B04CB4 /* DemoViewController.swift */; };
+		F9D585601953B43300B04CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5855E1953B43300B04CB4 /* Main.storyboard */; };
+		F9D585621953B43300B04CB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D585611953B43300B04CB4 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F9D5853F1953956800B04CB4 /* PBXContainerItemProxy */ = {
+		F90DA3FD1953B6170086AEFD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9D585291953956800B04CB4 /* Project object */;
 			proxyType = 1;
@@ -22,13 +28,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F90DA3FF1953B6170086AEFD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F90DA3FC1953B6170086AEFD /* PKLocationManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F9D585321953956800B04CB4 /* PKLocationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKLocationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D585361953956800B04CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9D585371953956800B04CB4 /* PKLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKLocationManager.h; sourceTree = "<group>"; };
-		F9D5853D1953956800B04CB4 /* PKLocationManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PKLocationManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9D585431953956800B04CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9D585441953956800B04CB4 /* PKLocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKLocationManagerTests.swift; sourceTree = "<group>"; };
+		F9D5854E195395BD00B04CB4 /* PKLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKLocationManager.swift; sourceTree = "<group>"; };
+		F9D58550195395D600B04CB4 /* PKLocationMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKLocationMonitor.swift; sourceTree = "<group>"; };
+		F9D585561953B43300B04CB4 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D585591953B43300B04CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D5855A1953B43300B04CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9D5855C1953B43300B04CB4 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		F9D5855F1953B43300B04CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9D585611953B43300B04CB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,11 +64,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9D5853A1953956800B04CB4 /* Frameworks */ = {
+		F9D585531953B43300B04CB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D5853E1953956800B04CB4 /* PKLocationManager.framework in Frameworks */,
+				F90DA3FB1953B6170086AEFD /* PKLocationManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +78,8 @@
 		F9D585281953956800B04CB4 = {
 			isa = PBXGroup;
 			children = (
+				F9D585571953B43300B04CB4 /* Demo */,
 				F9D585341953956800B04CB4 /* PKLocationManager */,
-				F9D585411953956800B04CB4 /* PKLocationManagerTests */,
 				F9D585331953956800B04CB4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				F9D585321953956800B04CB4 /* PKLocationManager.framework */,
-				F9D5853D1953956800B04CB4 /* PKLocationManagerTests.xctest */,
+				F9D585561953B43300B04CB4 /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				F9D585371953956800B04CB4 /* PKLocationManager.h */,
+				F9D5854E195395BD00B04CB4 /* PKLocationManager.swift */,
+				F9D58550195395D600B04CB4 /* PKLocationMonitor.swift */,
 				F9D585351953956800B04CB4 /* Supporting Files */,
 			);
 			path = PKLocationManager;
@@ -85,19 +112,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F9D585411953956800B04CB4 /* PKLocationManagerTests */ = {
+		F9D585571953B43300B04CB4 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				F9D585441953956800B04CB4 /* PKLocationManagerTests.swift */,
-				F9D585421953956800B04CB4 /* Supporting Files */,
+				F9D5855A1953B43300B04CB4 /* AppDelegate.swift */,
+				F9D5855C1953B43300B04CB4 /* DemoViewController.swift */,
+				F9D5855E1953B43300B04CB4 /* Main.storyboard */,
+				F9D585611953B43300B04CB4 /* Images.xcassets */,
+				F9D585581953B43300B04CB4 /* Supporting Files */,
 			);
-			path = PKLocationManagerTests;
+			path = Demo;
 			sourceTree = "<group>";
 		};
-		F9D585421953956800B04CB4 /* Supporting Files */ = {
+		F9D585581953B43300B04CB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F9D585431953956800B04CB4 /* Info.plist */,
+				F9D585591953B43300B04CB4 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -134,23 +164,24 @@
 			productReference = F9D585321953956800B04CB4 /* PKLocationManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F9D5853C1953956800B04CB4 /* PKLocationManagerTests */ = {
+		F9D585551953B43300B04CB4 /* PKLocationManagerDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9D5854B1953956800B04CB4 /* Build configuration list for PBXNativeTarget "PKLocationManagerTests" */;
+			buildConfigurationList = F9D5856F1953B43300B04CB4 /* Build configuration list for PBXNativeTarget "PKLocationManagerDemo" */;
 			buildPhases = (
-				F9D585391953956800B04CB4 /* Sources */,
-				F9D5853A1953956800B04CB4 /* Frameworks */,
-				F9D5853B1953956800B04CB4 /* Resources */,
+				F9D585521953B43300B04CB4 /* Sources */,
+				F9D585531953B43300B04CB4 /* Frameworks */,
+				F9D585541953B43300B04CB4 /* Resources */,
+				F90DA3FF1953B6170086AEFD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F9D585401953956800B04CB4 /* PBXTargetDependency */,
+				F90DA3FE1953B6170086AEFD /* PBXTargetDependency */,
 			);
-			name = PKLocationManagerTests;
-			productName = PKLocationManagerTests;
-			productReference = F9D5853D1953956800B04CB4 /* PKLocationManagerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = PKLocationManagerDemo;
+			productName = Demo;
+			productReference = F9D585561953B43300B04CB4 /* Demo.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -164,9 +195,8 @@
 					F9D585311953956800B04CB4 = {
 						CreatedOnToolsVersion = 6.0;
 					};
-					F9D5853C1953956800B04CB4 = {
+					F9D585551953B43300B04CB4 = {
 						CreatedOnToolsVersion = 6.0;
-						TestTargetID = F9D585311953956800B04CB4;
 					};
 				};
 			};
@@ -176,14 +206,15 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F9D585281953956800B04CB4;
 			productRefGroup = F9D585331953956800B04CB4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				F9D585551953B43300B04CB4 /* PKLocationManagerDemo */,
 				F9D585311953956800B04CB4 /* PKLocationManager */,
-				F9D5853C1953956800B04CB4 /* PKLocationManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -196,10 +227,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9D5853B1953956800B04CB4 /* Resources */ = {
+		F9D585541953B43300B04CB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D585601953B43300B04CB4 /* Main.storyboard in Resources */,
+				F9D585621953B43300B04CB4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,26 +243,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D58551195395D600B04CB4 /* PKLocationMonitor.swift in Sources */,
+				F9D5854F195395BD00B04CB4 /* PKLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9D585391953956800B04CB4 /* Sources */ = {
+		F9D585521953B43300B04CB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D585451953956800B04CB4 /* PKLocationManagerTests.swift in Sources */,
+				F9D5855D1953B43300B04CB4 /* DemoViewController.swift in Sources */,
+				F9D5855B1953B43300B04CB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F9D585401953956800B04CB4 /* PBXTargetDependency */ = {
+		F90DA3FE1953B6170086AEFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F9D585311953956800B04CB4 /* PKLocationManager */;
-			targetProxy = F9D5853F1953956800B04CB4 /* PBXContainerItemProxy */;
+			targetProxy = F90DA3FD1953B6170086AEFD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9D5855E1953B43300B04CB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9D5855F1953B43300B04CB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F9D585461953956800B04CB4 /* Debug */ = {
@@ -267,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -307,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,60 +367,63 @@
 		F9D585491953956800B04CB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PKLocationManager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		F9D5854A1953956800B04CB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PKLocationManager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		F9D5854C1953956800B04CB4 /* Debug */ = {
+		F9D585701953B43300B04CB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = PKLocationManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		F9D5854D1953956800B04CB4 /* Release */ = {
+		F9D585711953B43300B04CB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PKLocationManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -398,14 +448,16 @@
 				F9D5854A1953956800B04CB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		F9D5854B1953956800B04CB4 /* Build configuration list for PBXNativeTarget "PKLocationManagerTests" */ = {
+		F9D5856F1953B43300B04CB4 /* Build configuration list for PBXNativeTarget "PKLocationManagerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F9D5854C1953956800B04CB4 /* Debug */,
-				F9D5854D1953956800B04CB4 /* Release */,
+				F9D585701953B43300B04CB4 /* Debug */,
+				F9D585711953B43300B04CB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import CoreLocation
+
+@final class PKLocationMonitor {
+    
+    var monitoringObject: AnyObject
+    var queue: dispatch_queue_t
+    var handler: ((CLLocation) -> ())?
+    var desiredAccuracy: CLLocationAccuracy
+    
+    init(monitoringObject object: AnyObject, queue: dispatch_queue_t = dispatch_get_main_queue(), desiredAccuracy: CLLocationAccuracy = kCLLocationAccuracyHundredMeters, handler: ((CLLocation) -> ())?) {
+        self.monitoringObject = object
+        self.queue = queue
+        self.desiredAccuracy = desiredAccuracy
+        self.handler = handler
+    }
+}
