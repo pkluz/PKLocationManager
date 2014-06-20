@@ -14,7 +14,7 @@ class DemoViewController: UIViewController {
                             
     @IBOutlet var locationMonitoringActiveLabel: UILabel
     @IBOutlet var locationLabel: UILabel
-    var secondMonitor = UIView()
+    var secondMonitor = NSObject()
     
     override func viewDidLoad() {
         super.viewDidLoad()
