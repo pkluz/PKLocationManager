@@ -122,7 +122,6 @@ class PKLocationManager: NSObject, CLLocationManagerDelegate {
     
     /// Returns the monitor wrapper object for a given existing monitoring object.
     func locationMonitorFor(monitoringObject: AnyObject!) -> PKLocationMonitor? {
-        
         for monitor in monitors {
             if monitor.monitoringObject === monitoringObject
             {
