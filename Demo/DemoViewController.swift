@@ -18,6 +18,8 @@ class DemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationLabel.adjustsFontSizeToFitWidth = true
+        
         PKLocationManager.sharedManager.requiresLocationMonitoringWhenInUse = true
     }
     

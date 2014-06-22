@@ -21,8 +21,6 @@ class PKLocationManager: NSObject, CLLocationManagerDelegate {
         
         sharedLocationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         sharedLocationManager.delegate = self
-        
-        requiresLocationMonitoringWhenInUse = true
     }
     
     /// Adds an object to a list of objects interested in aquiring location updates. Note that the updates might be deferred.
