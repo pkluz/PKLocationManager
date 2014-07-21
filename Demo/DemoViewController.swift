@@ -12,24 +12,24 @@ import CoreLocation
 
 class DemoViewController: UIViewController {
                             
-    @IBOutlet var locationMonitoringActiveLabel: UILabel
-    @IBOutlet var locationLabel: UILabel
+    @IBOutlet var locationMonitoringActiveLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
     var secondMonitor = NSObject()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         locationLabel.adjustsFontSizeToFitWidth = true
         
-        PKLocationManager.sharedManager.requiresLocationMonitoringWhenInUse = true
+        LocationManager.sharedManager.requiresLocationMonitoringWhenInUse = true
     }
     
     @IBAction func registerForLocationUpdates(sender: AnyObject) {
-        var (success, error) = PKLocationManager.sharedManager.register(locationMonitor: self, desiredAccuracy: kCLLocationAccuracyBest, queue: dispatch_get_main_queue()) {
+        var (success, error) = LocationManager.sharedManager.register(locationMonitor: self, desiredAccuracy: kCLLocationAccuracyBest, queue: dispatch_get_main_queue()) {
             [weak self] location in
             self!.locationLabel.text = location.description
         }
         
-        PKLocationManager.sharedManager.register(locationMonitor: secondMonitor, desiredAccuracy: kCLLocationAccuracyBest, queue: dispatch_get_main_queue()) {
+        LocationManager.sharedManager.register(locationMonitor: secondMonitor, desiredAccuracy: kCLLocationAccuracyBest, queue: dispatch_get_main_queue()) {
             location in
             println("Second Monitor received location: \(location)")
         }
@@ -44,8 +44,8 @@ class DemoViewController: UIViewController {
     }
     
     @IBAction func deregisterFromLocationUpdates(sender: AnyObject) {
-        PKLocationManager.sharedManager.deregister(self)
-        PKLocationManager.sharedManager.deregister(secondMonitor)
+        LocationManager.sharedManager.deregister(self)
+        LocationManager.sharedManager.deregister(secondMonitor)
         locationMonitoringActiveLabel.text = "NO"
         locationLabel.text = "--"
     }

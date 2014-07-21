@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		F90DA3FB1953B6170086AEFD /* PKLocationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D585321953956800B04CB4 /* PKLocationManager.framework */; };
 		F90DA3FC1953B6170086AEFD /* PKLocationManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9D585321953956800B04CB4 /* PKLocationManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		F9D585381953956800B04CB4 /* PKLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D585371953956800B04CB4 /* PKLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9D5854F195395BD00B04CB4 /* PKLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5854E195395BD00B04CB4 /* PKLocationManager.swift */; };
-		F9D58551195395D600B04CB4 /* PKLocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D58550195395D600B04CB4 /* PKLocationMonitor.swift */; };
+		F9D585381953956800B04CB4 /* LocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D585371953956800B04CB4 /* LocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9D5854F195395BD00B04CB4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5854E195395BD00B04CB4 /* LocationManager.swift */; };
+		F9D58551195395D600B04CB4 /* LocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D58550195395D600B04CB4 /* LocationMonitor.swift */; };
 		F9D5855B1953B43300B04CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5855A1953B43300B04CB4 /* AppDelegate.swift */; };
 		F9D5855D1953B43300B04CB4 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5855C1953B43300B04CB4 /* DemoViewController.swift */; };
 		F9D585601953B43300B04CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5855E1953B43300B04CB4 /* Main.storyboard */; };
@@ -45,9 +45,9 @@
 /* Begin PBXFileReference section */
 		F9D585321953956800B04CB4 /* PKLocationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKLocationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D585361953956800B04CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9D585371953956800B04CB4 /* PKLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PKLocationManager.h; sourceTree = "<group>"; };
-		F9D5854E195395BD00B04CB4 /* PKLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKLocationManager.swift; sourceTree = "<group>"; };
-		F9D58550195395D600B04CB4 /* PKLocationMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKLocationMonitor.swift; sourceTree = "<group>"; };
+		F9D585371953956800B04CB4 /* LocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		F9D5854E195395BD00B04CB4 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F9D58550195395D600B04CB4 /* LocationMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMonitor.swift; sourceTree = "<group>"; };
 		F9D585561953B43300B04CB4 /* PKLocationManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PKLocationManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D585591953B43300B04CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9D5855A1953B43300B04CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,9 +96,9 @@
 		F9D585341953956800B04CB4 /* PKLocationManager */ = {
 			isa = PBXGroup;
 			children = (
-				F9D585371953956800B04CB4 /* PKLocationManager.h */,
-				F9D5854E195395BD00B04CB4 /* PKLocationManager.swift */,
-				F9D58550195395D600B04CB4 /* PKLocationMonitor.swift */,
+				F9D585371953956800B04CB4 /* LocationManager.h */,
+				F9D5854E195395BD00B04CB4 /* LocationManager.swift */,
+				F9D58550195395D600B04CB4 /* LocationMonitor.swift */,
 				F9D585351953956800B04CB4 /* Supporting Files */,
 			);
 			path = PKLocationManager;
@@ -139,7 +139,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D585381953956800B04CB4 /* PKLocationManager.h in Headers */,
+				F9D585381953956800B04CB4 /* LocationManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,8 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D58551195395D600B04CB4 /* PKLocationMonitor.swift in Sources */,
-				F9D5854F195395BD00B04CB4 /* PKLocationManager.swift in Sources */,
+				F9D58551195395D600B04CB4 /* LocationMonitor.swift in Sources */,
+				F9D5854F195395BD00B04CB4 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

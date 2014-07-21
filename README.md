@@ -15,7 +15,7 @@ After adding the framework to your project, you need to import the module
 import PKLocationManager
 ```
 
-More detailed documentation incoming. See `PKLocationManager.swift` for comments, and the Demo project for example usage.
+More detailed documentation incoming. See `LocationManager.swift` for comments, and the Demo project for example usage.
 
 ## Disclaimer
 
