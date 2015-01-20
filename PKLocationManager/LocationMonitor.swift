@@ -15,7 +15,7 @@ final internal class LocationMonitor {
     internal var handler: ((CLLocation) -> ())?
     internal var desiredAccuracy: CLLocationAccuracy
     
-    public init(monitoringObject object: AnyObject, queue: dispatch_queue_t = dispatch_get_main_queue(), desiredAccuracy: CLLocationAccuracy = kCLLocationAccuracyHundredMeters, handler: ((CLLocation) -> ())?) {
+    internal init(monitoringObject object: AnyObject, queue: dispatch_queue_t = dispatch_get_main_queue(), desiredAccuracy: CLLocationAccuracy = kCLLocationAccuracyHundredMeters, handler: ((CLLocation) -> ())?) {
         self.monitoringObject = object
         self.queue = queue
         self.desiredAccuracy = desiredAccuracy

@@ -16,23 +16,24 @@ import CoreLocation
         return Constants.sharedManager
     }
     
-    public init() {
+    required public override init() {
         super.init()
         
         sharedLocationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         sharedLocationManager.delegate = self
     }
     
+    
     /// Adds an object to a list of objects interested in aquiring location updates. Note that the updates might be deferred.
     public func register(locationMonitor monitoringObject:AnyObject!, desiredAccuracy: CLLocationAccuracy, queue: dispatch_queue_t, handler:(location: CLLocation) -> ()) -> (success: Bool, error: NSError?) {
         if !isLocationMonitoringAvailable {
-            return (false, NSError.errorWithDomain("com.NSExceptional.PKLocationManager", code: 0, userInfo: [NSLocalizedDescriptionKey : "Location monitoring unavailable." ]))
+            return (false, NSError(domain: "com.NSExceptional.PKLocationManager", code: 0, userInfo: [NSLocalizedDescriptionKey : "Location monitoring unavailable." ]))
         }
         
         var presentMonitor = self.locationMonitorFor(monitoringObject)
         
-        if presentMonitor {
-            return (false, NSError.errorWithDomain("com.NSExceptional.PKLocationManager", code: 1, userInfo: [NSLocalizedDescriptionKey : "Object is already registered as a location monitor." ]))
+        if (presentMonitor != nil) {
+            return (false, NSError(domain: "com.NSExceptional.PKLocationManager", code: 1, userInfo: [NSLocalizedDescriptionKey : "Object is already registered as a location monitor." ]))
         }
         
         var monitor = LocationMonitor(monitoringObject: monitoringObject, queue: queue, desiredAccuracy: desiredAccuracy, handler: handler)
