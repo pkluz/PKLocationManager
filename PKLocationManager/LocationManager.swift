@@ -110,7 +110,7 @@ import CoreLocation
     
     /// Returns 'true' if the user granted location access permissions, independent of the application's state (foreground + background), 'false' otherwise.
     public var isLocationMonitoringAlwaysPermitted: Bool {
-        return CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized
+        return CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways
     }
     
     /// Computes the accuracy for the location manager, which is equal to the most precise accuracy requested by one of the monitoring objects.
@@ -142,7 +142,7 @@ import CoreLocation
     }
     
     public func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        var permissionGiven = status == CLAuthorizationStatus.Authorized || status == CLAuthorizationStatus.AuthorizedWhenInUse
+        var permissionGiven = status == CLAuthorizationStatus.AuthorizedAlways || status == CLAuthorizationStatus.AuthorizedWhenInUse
         if permissionGiven && monitors.count > 0 {
             sharedLocationManager.startUpdatingLocation()
         }
