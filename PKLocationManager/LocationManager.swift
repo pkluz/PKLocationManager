@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-@objc(PKLocationManager) public class LocationManager: NSObject, CLLocationManagerDelegate {
+@objc public class LocationManager: NSObject, CLLocationManagerDelegate {
     
     /// Shared PKLocationManager instance.
     public class var sharedManager: LocationManager {
@@ -22,7 +22,6 @@ import CoreLocation
         sharedLocationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         sharedLocationManager.delegate = self
     }
-    
     
     /// Adds an object to a list of objects interested in aquiring location updates. Note that the updates might be deferred.
     public func register(locationMonitor monitoringObject:AnyObject!, desiredAccuracy: CLLocationAccuracy, queue: dispatch_queue_t, handler:(location: CLLocation) -> ()) -> (success: Bool, error: NSError?) {
@@ -46,6 +45,29 @@ import CoreLocation
         }
         
         return (true, nil)
+    }
+    
+    
+    /// Adds an object to a list of objects interested in aquiring location updates. Note that the updates might be deferred.
+    public func register(locationMonitor monitoringObject:AnyObject!, desiredAccuracy: CLLocationAccuracy, handler:(location: CLLocation) -> ()) -> (success: Bool, error: NSError?) {
+        return register(locationMonitor: monitoringObject, desiredAccuracy: desiredAccuracy, queue: dispatch_get_main_queue(), handler: handler)
+    }
+    
+    /// OBJETIVE-C COMPATIBILITY METHOD - Adds an object to a list of objects interested in aquiring location updates. Note that the updates might be deferred.
+    public func register(locationMonitor monitoringObject:AnyObject!, desiredAccuracy: CLLocationAccuracy, queue: dispatch_queue_t, errorPtr: NSErrorPointer, handler:(location: CLLocation) -> ()) -> Bool {
+        let (success, error) = register(locationMonitor: monitoringObject, desiredAccuracy: desiredAccuracy, queue: queue, handler: handler);
+        
+        if (errorPtr != nil) {
+            errorPtr.memory = error
+            return false
+        }
+        
+        return true
+    }
+    
+    /// OBJETIVE-C COMPATIBILITY METHOD - Adds an object to a list of objects interested in aquiring location updates. Note that the updates might be deferred.
+    public func register(locationMonitor monitoringObject:AnyObject!, desiredAccuracy: CLLocationAccuracy, errorPtr: NSErrorPointer, handler:(location: CLLocation) -> ()) -> Bool {
+        return register(locationMonitor: monitoringObject, desiredAccuracy: desiredAccuracy, queue: dispatch_get_main_queue(), errorPtr: errorPtr, handler: handler)
     }
     
     /// Removes an object from the list of objects registered for location updates.
@@ -110,7 +132,7 @@ import CoreLocation
     
     /// Returns 'true' if the user granted location access permissions, independent of the application's state (foreground + background), 'false' otherwise.
     public var isLocationMonitoringAlwaysPermitted: Bool {
-        return CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized
+        return CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways
     }
     
     /// Computes the accuracy for the location manager, which is equal to the most precise accuracy requested by one of the monitoring objects.
@@ -142,7 +164,7 @@ import CoreLocation
     }
     
     public func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        var permissionGiven = status == CLAuthorizationStatus.Authorized || status == CLAuthorizationStatus.AuthorizedWhenInUse
+        var permissionGiven = status == CLAuthorizationStatus.AuthorizedAlways || status == CLAuthorizationStatus.AuthorizedWhenInUse
         if permissionGiven && monitors.count > 0 {
             sharedLocationManager.startUpdatingLocation()
         }
